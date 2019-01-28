@@ -5,7 +5,7 @@ from pyspark import SparkContext
 from pyspark.sql import SparkSession
 
 
-sc = SparkContext()
+sc = SparkContext('local[*]','spark_application')
 spark = SparkSession(sc)
 
 
