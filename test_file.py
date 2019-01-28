@@ -32,6 +32,6 @@ final = moviewise_avg_rating.join(movie_count,'movie_ID')
 top_movies = final.join(movie_df,'movie_ID')
 #list_movies = top_movies.orderBy('avg(rating)').take(10)
 
-print(top_movies.collect())
+print(movie_df.collect())
 
 
