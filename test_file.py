@@ -4,8 +4,8 @@
 from pyspark import SparkContext
 from pyspark.sql import SparkSession
 
-conf = SparkConf().setAppName('test spark')
-sc = SparkContext(conf = conf)
+
+sc = SparkContext()
 spark = SparkSession(sc)
 
 
