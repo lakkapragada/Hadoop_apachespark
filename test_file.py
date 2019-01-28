@@ -2,6 +2,8 @@
 # a public data set was taken and stored in hadoop distribution 
 
 from pyspark import SparkConf,SparkContext
+from pyspark.sql import *
+
 conf = SparkConf().setAppName('test spark')
 sc = SparkContext(conf = conf)
 
