@@ -10,5 +10,5 @@ data = sc.textFile('hdfs:///user/maria_dev/ml-100k/u.data')
 
 out = data.map(lambda x:x.split())
 out.map(convert)
-out.collect()
-
+output = out.collect()
+print(output)
