@@ -13,7 +13,7 @@ spark = SparkSession(sc)
 data = spark.sparkContext.textFile('hdfs:///user/maria_dev/ml-100k/u.data')
 
 # perform some transformations on RDD 
-out = data.map(lambda x:x.split()).map(lambda x:[int(x[0]),int(x[1]),float(x[2]),int(x[4])])
+out = data.map(lambda x:x.split()).map(lambda x:[int(x[0]),int(x[1]),float(x[2]),int(x[3])])
 
 # convert RDD to data frame to assign column names 
 
