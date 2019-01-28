@@ -22,7 +22,7 @@ spark_df = out.toDF(['id','movie_ID','rating','time_stamp'])
 # movie names list is stored in another meta data file
 
 items = spark.sparkContext.textFile('hdfs:///user/maria_dev/ml-100k/u.item')
-movie_items = items.map(lambda x:x.split('|')).map(lambda x:[int(x[0]),str(x[1])])
+movie_items = items.map(lambda x:x.split('|')).map(lambda x:[int(x[0]),x[1]])
 movie_df = movie_items.toDF(['movie_ID','movie_name'])
 # average ratings of each movie
 moviewise_avg_rating = spark_df.groupBy('movie_ID').avg('rating')
