@@ -30,8 +30,8 @@ moviewise_avg_rating = spark_df.groupBy('movie_ID').avg('rating')
 movie_count = spark_df.groupBy('movie_ID').count()
 final = moviewise_avg_rating.join(movie_count,'movie_ID')
 top_movies = final.join(movie_df,'movie_ID')
+list_movies = top_movies.orderBy('avg(rating)').take(10)
 
-
-print(top_movies.orderBy('avg(rating)').take(10))
+print(list_movies)
 
 
