@@ -9,7 +9,7 @@ from pyspark.ml.evaluation import BinaryClassificationEvaluator
 sc = SparkContext('local[*]','spark_application')
 spark = SparkSession(sc)
 
-data = spark.read.csv('hdfs:///user/maria_dev/Hadoop_apachespark/telecom_churn.csv',header=True,inferSchema=True)
+data = spark.read.csv('hdfs:///user/maria_dev/customer_churn/telecom_churn.csv',header=True,inferSchema=True)
 
 indexer = StringIndexer(inputCol = 'International plan'
                         ,outputCol = 'encoded_International plan').fit(data)
