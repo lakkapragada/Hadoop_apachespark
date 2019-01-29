@@ -47,6 +47,6 @@ model = LogisticRegression(labelCol='encoded_Churn')
 model = model.fit(train)
 summary = model.summary
 predictions=model.evaluate(test)
-print('The area under ROC is :',predictions.areaUnderROC)
+#print('The area under ROC is :',predictions.areaUnderROC)
 
 
